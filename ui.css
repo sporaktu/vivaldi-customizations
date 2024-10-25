@@ -1,3 +1,7 @@
+body #browser{
+  --radius: 4px !important;
+}
+
 /* Hide the tab bar scrollbar (and all other scrollbars) */
 ::-webkit-scrollbar {
     width: 0;  /* Remove scrollbar space */
