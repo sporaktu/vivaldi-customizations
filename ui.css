@@ -1,0 +1,21 @@
+/* Hide the tab bar scrollbar (and all other scrollbars) */
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+.density-on .tabbar-wrapper {
+  --radius: 4px !important; /* Make the corner radius far less round */
+}
+
+/* Fix weird layout inconsistencies from flexbox implementation on tabs */
+.tab .tab-header {
+  max-width: 100%;
+  padding: 0 6px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+/* remove the unnecessary gap to the right of the tab close button */
+#browser:not(.alt-tabs) #tabs-container .tab:not(.tab-mini) .close {
+  margin-right: unset;
+}
